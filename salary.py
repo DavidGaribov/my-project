@@ -4,14 +4,16 @@ print()
 
 
 def main():
+    shift_pay = 5177.33
     days = int(input('-Введите количество отработанных смен: '))
     acts = int(input('-Введите количество отработанных актов: '))
     scales = int(input('-Введите количество докладных по весовому контролю: '))
     defective = int(input('-Введите количество докладных по браку: '))
     raw_material = int(input('-Введите количество докладных по контролю сырья: '))
     bonus = int(input('-Введите премию: '))
-    shift_pay = 5177.33
-    calculation(days, acts, scales, defective, raw_material, bonus, shift_pay)
+    fine = int(input('-Введите штраф: '))
+
+    calculation(shift_pay, days, acts, scales, defective, raw_material, bonus, fine)
 
 
 def tax(x):
@@ -19,8 +21,8 @@ def tax(x):
     return n
 
 
-def calculation(days, acts, scales, defective, raw_material, bonus, shift_pay):
-    salary = days * shift_pay + ((acts + scales) * 60) + ((raw_material + defective) * 100) + bonus
+def calculation(shift_pay, days, acts, scales, defective, raw_material, bonus, fine):
+    salary = (days * shift_pay + ((acts + scales) * 60) + ((raw_material + defective) * 100) + bonus) - fine
     prepaid = tax(13900)
     total_salary = tax(salary) - prepaid
     print()
