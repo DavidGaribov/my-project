@@ -51,8 +51,8 @@ def main():
     calculation(shift_pay, days, acts, scales, defective, raw_material, bonus, fine)
 
 
-def check(n):
-    return n >= 0 and isinstance(n, int)
+def check(c):
+    return c >= 0 and isinstance(c, int)
 
 
 def tax(x):
