@@ -5,15 +5,54 @@ print()
 
 def main():
     shift_pay = 5177.33
-    days = int(input('-Введите количество отработанных смен: '))
-    acts = int(input('-Введите количество отработанных актов: '))
-    scales = int(input('-Введите количество докладных по весовому контролю: '))
-    defective = int(input('-Введите количество докладных по браку: '))
-    raw_material = int(input('-Введите количество докладных по контролю сырья: '))
-    bonus = int(input('-Введите премию: '))
-    fine = int(input('-Введите штраф: '))
+    while True:
+        days = int(input('-Введите количество отработанных смен: '))
+        if check(days):
+            break
+        else:
+            print('Ошибка ввода. Необходимо ввести целое положительное число.')
+    while True:
+        acts = int(input('-Введите количество отработанных актов: '))
+        if check(acts):
+            break
+        else:
+            print('Ошибка ввода. Необходимо ввести целое положительное число.')
+    while True:
+        scales = int(input('-Введите количество докладных по весовому контролю: '))
+        if check(scales):
+            break
+        else:
+            print('Ошибка ввода. Необходимо ввести целое положительное число.')
+    while True:
+        defective = int(input('-Введите количество докладных по браку: '))
+        if check(defective):
+            break
+        else:
+            print('Ошибка ввода. Необходимо ввести целое положительное число.')
+    while True:
+        raw_material = int(input('-Введите количество докладных по контролю сырья: '))
+        if check(raw_material):
+            break
+        else:
+            print('Ошибка ввода. Необходимо ввести целое положительное число.')
+    while True:
+        bonus = int(input('-Введите премию: '))
+        if check(bonus):
+            break
+        else:
+            print('Ошибка ввода. Необходимо ввести целое положительное число.')
+    while True:
+        fine = int(input('-Введите штраф: '))
+        if check(fine):
+            break
+        else:
+            print('Ошибка ввода. Необходимо ввести целое положительное число.')
 
     calculation(shift_pay, days, acts, scales, defective, raw_material, bonus, fine)
+
+
+def check(n):
+    return n >= 0 and isinstance(n, int)
 
 
 def tax(x):
@@ -22,9 +61,9 @@ def tax(x):
 
 
 def calculation(shift_pay, days, acts, scales, defective, raw_material, bonus, fine):
-    salary = (days * shift_pay + ((acts + scales) * 60) + ((raw_material + defective) * 100) + bonus) - fine
+    salary = days * shift_pay + ((acts + scales) * 60) + ((raw_material + defective) * 100) + bonus
     prepaid = tax(13900)
-    total_salary = tax(salary) - prepaid
+    total_salary = (tax(salary) - fine) - prepaid
     print()
     print(f'= Ваша зарплата: {round(total_salary, 1)}р., аванс: {round(prepaid, 1)}р. =')
     print()
