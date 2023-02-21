@@ -64,8 +64,10 @@ def calculation(shift_pay, days, acts, scales, defective, raw_material, bonus, f
     salary = days * shift_pay + ((acts + scales) * 60) + ((raw_material + defective) * 100) + bonus
     prepaid = tax(13900)
     total_salary = (tax(salary) - fine) - prepaid
+    accrued = total_salary + prepaid
     print()
-    print(f'= Ваша зарплата: {round(total_salary, 1)}р., аванс: {round(prepaid, 1)}р. =')
+    print(f'= Всего начислено {round(accrued, 1)}р. = \nИз них: '
+          f'\n-зарплата {round(total_salary, 1)}р. \n-аванс {round(prepaid, 1)}р.')
     print()
     user_action()
 
