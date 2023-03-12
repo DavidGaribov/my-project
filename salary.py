@@ -4,54 +4,15 @@ print()
 
 def main():
     shift_pay = 5177.33
-    while True:
-        days = int(input('-Введите количество отработанных смен: '))
-        if check(days):
-            break
-        else:
-            print('Ошибка ввода. Необходимо ввести целое положительное число.')
-    while True:
-        acts = int(input('-Введите количество отработанных актов: '))
-        if check(acts):
-            break
-        else:
-            print('Ошибка ввода. Необходимо ввести целое положительное число.')
-    while True:
-        scales = int(input('-Введите количество докладных по весовому контролю: '))
-        if check(scales):
-            break
-        else:
-            print('Ошибка ввода. Необходимо ввести целое положительное число.')
-    while True:
-        defective = int(input('-Введите количество докладных по браку: '))
-        if check(defective):
-            break
-        else:
-            print('Ошибка ввода. Необходимо ввести целое положительное число.')
-    while True:
-        raw_material = int(input('-Введите количество докладных по контролю сырья: '))
-        if check(raw_material):
-            break
-        else:
-            print('Ошибка ввода. Необходимо ввести целое положительное число.')
-    while True:
-        bonus = int(input('-Введите премию: '))
-        if check(bonus):
-            break
-        else:
-            print('Ошибка ввода. Необходимо ввести целое положительное число.')
-    while True:
-        fine = int(input('-Введите штраф: '))
-        if check(fine):
-            break
-        else:
-            print('Ошибка ввода. Необходимо ввести целое положительное число.')
+    days = int(input('-Введите количество отработанных смен: '))
+    acts = int(input('-Введите количество отработанных актов: '))
+    scales = int(input('-Введите количество докладных по весовому контролю: '))
+    defective = int(input('-Введите количество докладных по браку: '))
+    raw_material = int(input('-Введите количество докладных по контролю сырья: '))
+    bonus = int(input('-Введите премию: '))
+    fine = int(input('-Введите штраф: '))
 
     calculation(shift_pay, days, acts, scales, defective, raw_material, bonus, fine)
-
-
-def check(c):
-    return c >= 0 and isinstance(c, int)
 
 
 def tax(x):
