@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83b0d4d4-eb19-4ebb-a2e2-1864dbb0926c" name="Changes" comment="changed version number" />
+    <list default="true" id="83b0d4d4-eb19-4ebb-a2e2-1864dbb0926c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,8 +12,23 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MvMzKvBVDt1YjBg2k7psHZ5Osn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,6 +94,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task id="LOCAL-00001" summary="PEP8">
       <created>1678639323123</created>
@@ -94,7 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678639673778</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="83b0d4d4-eb19-4ebb-a2e2-1864dbb0926c" name="Changes" comment="changed version number" />
+      <created>1678643869636</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678643869636</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Revert &quot;PEP8&quot;&#10;&#10;This reverts commit e1471b42">
+      <created>1678644091869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678644091869</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,7 +138,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="no-input-control" />
                       </list>
                     </value>
                   </entry>
@@ -123,6 +153,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PEP8" />
     <MESSAGE value="changed version number" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed version number" />
+    <MESSAGE value="Revert &quot;PEP8&quot;&#10;&#10;This reverts commit e1471b42" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;PEP8&quot;&#10;&#10;This reverts commit e1471b42" />
   </component>
 </project>
